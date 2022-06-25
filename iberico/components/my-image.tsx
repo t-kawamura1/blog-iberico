@@ -3,7 +3,7 @@ type Props = {
   picture: string
 }
 
-const Avatar = ({ name, picture }: Props) => {
+const MyImage = ({ name, picture }: Props) => {
   return (
     <div className="flex items-center">
       <img src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
@@ -12,4 +12,4 @@ const Avatar = ({ name, picture }: Props) => {
   )
 }
 
-export default Avatar
+export default MyImage
