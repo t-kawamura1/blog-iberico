@@ -1,5 +1,6 @@
 import Footer from './footer'
 import Meta from './meta'
+import MyContentsMenu from './my-contents-menu'
 
 type Props = {
   children: React.ReactNode
@@ -12,6 +13,9 @@ const Layout = ({ children }: Props) => {
       <Meta />
       <div className="min-h-screen">
         <main>{children}</main>
+      </div>
+      <div className="fixed z-20 md:top-1/4 md:right-3">
+        <MyContentsMenu />
       </div>
       <Footer />
     </>
