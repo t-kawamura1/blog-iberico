@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./:/app
-    command: sh -c "cd iberico && npm run dev"
+      - ./iberico:/app
+    command: sh -c "npm run dev"
     ports:
       - "3000:3000"
