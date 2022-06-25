@@ -5,7 +5,6 @@ import Author from '../types/author'
 type Props = {
   title: string
   date: string
-  excerpt: string
   author: Author
   slug: string
 }
@@ -13,7 +12,6 @@ type Props = {
 const PostPreview = ({
   title,
   date,
-  excerpt,
   author,
   slug,
 }: Props) => {
@@ -27,7 +25,6 @@ const PostPreview = ({
       <div className="text-lg mb-4">
         <DateFormatter dateString={date} />
       </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
     </div>
   )
 }

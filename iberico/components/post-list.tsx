@@ -16,7 +16,6 @@ const PostList = ({ posts }: Props) => {
             date={post.date}
             author={post.author}
             slug={post.slug}
-            excerpt={post.excerpt}
           />
         ))}
       </div>
