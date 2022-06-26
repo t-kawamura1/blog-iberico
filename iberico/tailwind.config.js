@@ -21,6 +21,9 @@ module.exports = {
             1: "#cc7a7a",
           }
         }
+      },
+      backgroundImage: {
+        hero: "url('/assets/bg-images/hero.jpg')",
       }
     },
   },
