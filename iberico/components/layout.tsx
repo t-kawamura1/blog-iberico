@@ -1,6 +1,5 @@
 import {useEffect, useState} from 'react'
 import Footer from './footer'
-import Header from './header'
 import MainMenu from './main-menu'
 import Meta from './meta'
 import MyContentsMenu from './my-contents-menu'
