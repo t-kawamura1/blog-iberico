@@ -1,4 +1,7 @@
+import {useEffect, useState} from 'react'
 import Footer from './footer'
+import Header from './header'
+import MainMenu from './main-menu'
 import Meta from './meta'
 import MyContentsMenu from './my-contents-menu'
 
@@ -7,10 +10,26 @@ type Props = {
 }
 
 /** 全体のレイアウトを司るコンポーネント */
-const Layout = ({ children }: Props) => {
+const Layout = ({children}: Props) => {
+  const [isDisplay, setIsDisplay] = useState(false)
+  const toggleDisplay = () => {
+    window.scrollY > 760
+      ? setIsDisplay(true)
+      : setIsDisplay(false)
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', toggleDisplay)
+    return () => window.removeEventListener('scroll', toggleDisplay)
+  }, [])
+
   return (
     <>
       <Meta />
+      <div className="fixed z-30 transition ease-in-out delay-500">
+        <div className={isDisplay ? 'opacity-100' : 'opacity-0'}>
+          <MainMenu></MainMenu>
+        </div>
+      </div>
       <div className="min-h-screen">
         <main>{children}</main>
       </div>

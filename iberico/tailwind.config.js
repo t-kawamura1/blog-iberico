@@ -16,6 +16,8 @@ module.exports = {
             // https://www.colordic.org/colorsample/7acc7a
             1: "#7acc7a",
             2: "#ccffcc",
+            3: "#bee0c2",
+            4: "#a7d28d",
           },
           red: {
             1: "#cc7a7a",

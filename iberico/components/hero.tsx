@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
-    <section className="bg-hero bg-fixed bg-base bg-opacity-40 bg-blend-lighten h-screen bg-cover relative">
-      <div className="flex flex-col items-center absolute top-1/3 left-1/3">
+    <section className="bg-hero bg-fixed bg-base bg-opacity-40 bg-blend-lighten h-screen bg-cover flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center">
         <h1 className="text-5xl md:text-7xl tracking-wide">
           Blog Iberico
         </h1>
