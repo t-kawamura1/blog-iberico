@@ -6,7 +6,7 @@ type Props = {
 
 /** 要素中央よせ・レスポンシブに対応するコンポーネント */
 const Container: FunctionComponent = ({ children }: Props) => {
-  return <div className="container mx-auto px-5">{children}</div>
+  return <div className="wi-fit px-12">{children}</div>
 }
 
 export default Container

@@ -19,7 +19,7 @@ const Index = ({ allPosts }: Props) => {
         <Head>
           <title>Blog Iberico</title>
         </Head>
-        <div className="mb-32">
+        <div className="">
           <Hero />
         </div>
         <Container>

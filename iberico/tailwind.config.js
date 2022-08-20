@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       colors: {
         // https://www.colordic.org/colorsample/2375
-        base: "#f8fbf8",
+        bg: "#f8fbf8",
         mono: {
           1: "#323332",
           2: "#656665",
