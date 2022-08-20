@@ -5,9 +5,9 @@ const Hero = () => {
         <h1 className="text-5xl md:text-7xl tracking-wide">
           Blog Iberico
         </h1>
-        <h4 className="text-center text-3xl mt-5 tracking-wide">
+        <p className="text-center text-3xl mt-5 tracking-wide">
           Tech Blog Authored By T.Kawa
-        </h4>
+        </p>
       </div>
     </section>
   )
