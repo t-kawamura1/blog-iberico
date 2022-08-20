@@ -1,6 +1,5 @@
 import PostPreview from './post-preview'
 import Post from '../types/post'
-// import { MdOutlineArticle } from "react-icons/md"
 import { VscNotebook } from "react-icons/vsc"
 
 type Props = {

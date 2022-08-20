@@ -24,8 +24,8 @@ const Layout = ({children}: Props) => {
   return (
     <>
       <Meta />
-      <div className="fixed z-30 transition ease-in-out delay-500">
-        <div className={isDisplay ? 'opacity-100' : 'opacity-0'}>
+      <div className="fixed z-30 transition ease-in-out delay-500 hidden md:block">
+        <div className={isDisplay ? 'opacity-100' : 'opacity-100'}>
           <MainMenu></MainMenu>
         </div>
       </div>

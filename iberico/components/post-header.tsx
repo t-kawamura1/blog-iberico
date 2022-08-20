@@ -10,11 +10,11 @@ type Props = {
 
 const PostHeader = ({ title, date, author }: Props) => {
   return (
-    <div className="max-w-2xl mx-auto">
-      <div className="mt-8 mb-8 md:mt-16 md:mb-12">
+    <div className="pt-8 pb-2 md:pt-16 md:pb-8 flex flex-col gap-2 md:gap-4">
+      <div>
         <PostTitle>{title}</PostTitle>
       </div>
-      <div className="mb-6 text-lg">
+      <div className="text-sm md:text-lg text-right">
         <DateFormatter dateString={date} />
       </div>
     </div>

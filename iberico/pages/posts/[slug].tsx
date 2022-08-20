@@ -28,19 +28,21 @@ const Post = ({ post, morePosts }: Props) => {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
-              <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
+            <article className='pt-4'>
+              <div className="mb-24 md:mb-4 mx-2 md:mx-4 pt-2 pb-4 px-5 md:pt-8 md:pb-16 md:px-32 bg-white shadow">
+                <Head>
+                  <title>
+                    {post.title} | Blog Iberico
+                  </title>
+                  <meta property="og:image" content={post.ogImage.url} />
+                </Head>
+                <PostHeader
+                  title={post.title}
+                  date={post.date}
+                  author={post.author}
+                />
+                <PostBody content={post.content} />
+              </div>
             </article>
           </>
         )}
