@@ -1,3 +1,4 @@
+import {useRouter} from 'next/router'
 import {useEffect, useState} from 'react'
 import Footer from './footer'
 import MainMenu from './main-menu'
@@ -10,9 +11,12 @@ type Props = {
 
 /** 全体のレイアウトを司るコンポーネント */
 const Layout = ({children}: Props) => {
+  const router = useRouter();
+
   const [isDisplay, setIsDisplay] = useState(false)
   const toggleDisplay = () => {
-    window.scrollY > 760
+
+    router.pathname !== '/' || window.scrollY > 760
       ? setIsDisplay(true)
       : setIsDisplay(false)
   }
@@ -25,7 +29,7 @@ const Layout = ({children}: Props) => {
     <>
       <Meta />
       <div className="fixed z-30 transition ease-in-out delay-500 hidden md:block">
-        <div className={isDisplay ? 'opacity-100' : 'opacity-100'}>
+        <div className={isDisplay ? 'opacity-100' : 'opacity-0'}>
           <MainMenu></MainMenu>
         </div>
       </div>

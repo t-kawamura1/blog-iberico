@@ -18,8 +18,8 @@ const PostPreview = ({
 }: Props) => {
   return (
     <Link as={`/posts/${slug}`} href="/posts/[slug]">
-      <div className="p-5 border-l-8 border-accent-green-4 shadow bg-mono-4
-        flex flex-col justify-between hover:cursor-pointer hover:shadow-lg"
+      <div className="px-4 py-4 md:px-8 md:py-6 border-l-8 border-accent-green-4 shadow bg-mono-4
+        flex flex-col justify-between gap-4 hover:cursor-pointer hover:shadow-lg"
       >
         <h3 className="text-base md:text-lg leading-snug">
             <a className="hover:underline">{title}</a>

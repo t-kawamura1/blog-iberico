@@ -7,7 +7,6 @@ import Layout from '../../components/layout'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 import PostType from '../../types/post'
 
@@ -29,17 +28,16 @@ const Post = ({ post, morePosts }: Props) => {
         ) : (
           <>
             <article className='pt-4'>
-              <div className="mb-24 md:mb-4 mx-2 md:mx-4 pt-2 pb-4 px-5 md:pt-8 md:pb-16 md:px-32 bg-white shadow">
+              <div className="mb-24 md:mb-4 mx-2 md:mx-8 pt-2 pb-4 px-5 md:pt-8 md:pb-16 md:px-36 bg-white shadow">
                 <Head>
                   <title>
                     {post.title} | Blog Iberico
                   </title>
-                  <meta property="og:image" content={post.ogImage.url} />
+                  {/* <meta property="og:image" content={post.ogImage.url} /> */}
                 </Head>
                 <PostHeader
                   title={post.title}
                   date={post.date}
-                  author={post.author}
                 />
                 <PostBody content={post.content} />
               </div>
