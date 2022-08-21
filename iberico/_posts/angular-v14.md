@@ -24,7 +24,7 @@ Type Formsの概要は[Angular公式](https://angular.io/guide/typed-forms#typed
 
 ## v13のReactive Forms
 - テンプレート
-```ts
+```html
 <div class="wisky-container">
   <form [formGroup]="wisky">
     <label for="brand">銘柄</label>

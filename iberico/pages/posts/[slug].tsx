@@ -9,13 +9,26 @@ import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import markdownToHtml from '../../lib/markdownToHtml'
 import PostType from '../../types/post'
+import hljs from 'highlight.js/lib/core'
+import typescript from 'highlight.js/lib/languages/typescript'
+import javascript from 'highlight.js/lib/languages/javascript'
+import xml from 'highlight.js/lib/languages/xml'
+import 'highlight.js/styles/a11y-dark.css'
+import {useEffect} from 'react'
 
 type Props = {
   post: PostType
   morePosts: PostType[]
 }
 
-const Post = ({ post, morePosts }: Props) => {
+hljs.registerLanguage('ts', typescript)
+hljs.registerLanguage('js', javascript)
+hljs.registerLanguage('html', xml)
+
+const Post = ({post, morePosts}: Props) => {
+  useEffect(() => {
+    hljs.highlightAll()
+  }, [hljs])
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -28,7 +41,7 @@ const Post = ({ post, morePosts }: Props) => {
         ) : (
           <>
             <article className='pt-4'>
-              <div className="mb-24 md:mb-4 mx-2 md:mx-8 pt-2 pb-4 px-5 md:pt-8 md:pb-16 md:px-36 bg-white shadow">
+              <div className="mb-24 md:mb-4 mx-2 md:mx-12 pt-2 pb-4 px-5 md:pt-8 md:pb-16 md:px-48 bg-white shadow">
                 <Head>
                   <title>
                     {post.title} | Blog Iberico

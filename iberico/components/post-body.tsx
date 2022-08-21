@@ -4,7 +4,8 @@ type Props = {
   content: string
 }
 
-const PostBody = ({ content }: Props) => {
+const PostBody = ({content}: Props) => {
+  console.log(content)
   return (
     <div className="">
       <div

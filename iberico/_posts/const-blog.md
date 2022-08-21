@@ -30,7 +30,7 @@ date: '2020-05-25'
 
 ## 1. enumを使う
 
-```typescript
+```ts
 export enum Foodstuff {
   Onion,
   Cucumber,
@@ -43,7 +43,7 @@ export enum Foodstuff {
 上の場合、実際の各値は数値(0-3)になる。
 enumはそのキーと値どちらでもアクセスできるが、値でアクセスすると存在し得ない値でもアクセスできてしまう（**コンパイルエラーにならない**）。
 
-```typescript
+```ts
 const onion = Foodstuff.Onion;
 const otherFood = Foodstuff[9]; // エラーにならない！
 ```
@@ -53,7 +53,7 @@ const otherFood = Foodstuff[9]; // エラーにならない！
 
 ## 2. const enumを使う
 
-```typescript
+```ts
 export const enum Foodstuff {
   Cabbage,
   Cucumber,
@@ -64,7 +64,7 @@ export const enum Foodstuff {
 
 constを付与すると、１のような値でのアクセスができなくなるので少し安全。
 
-```typescript
+```ts
 const onion = Foodstuff[0]
 // const 列挙型メンバーは、文字列リテラルを使用してのみアクセスできます。
 const cucumber = Foodstuff.Cucumber
@@ -74,7 +74,7 @@ const cucumber = Foodstuff.Cucumber
 しかし相変わらず実際の値が数値のままである。
 しかも残念なことに、すべての数値がenumに割り当てられてしまう。
 
-```typescript
+```ts
 const food: Foodstuff = 10;
 ```
 
@@ -82,7 +82,7 @@ const food: Foodstuff = 10;
 しかも、これらの状態では食材しか表現できていない（四季が抜けている）。
 ではこれをどう解決するか。キーの名前を四季にし、割り当てる値を文字列値にすればいい。
 
-```typescript
+```ts
 export const enum Foodstuff {
   Spring = 'onion',
   Summer = 'cucumber',
@@ -100,7 +100,7 @@ const food: Foodstuff = 10;
 
 ## 3. namespaceを使う
 
-```typescript
+```ts
 export namespace Foodstuff {
   export const Spring = 'onion'
   export const Summer = 'cucumber'
@@ -115,7 +115,7 @@ console.log(Foodstuff.Automn)
 namespaceであれば、enumのように存在し得ないプロパティアクセスはできない。そもそも変数の集まりなので、当然といえば当然。存在しない変数にはアクセスできないので。
 enumでは何気なく`型`として使用していたが、namespaceは型を生成しないので、下記のように型として使用することはできない。
 
-```typescript
+```ts
 const food: Foodstuff = 'onion'
 // 名前空間 'Foodstuff' を型として使用することはできません。
 ```
@@ -126,7 +126,7 @@ const food: Foodstuff = 'onion'
 
 ## 4. クラスを使う
 
-```typescript
+```ts
 export class Foodstuff {
   static readonly Spring = 'onion';
   static readonly Summer = 'cucumber';
@@ -146,7 +146,7 @@ const food: Foodstuff = 'apple'
 
 ## 5. 配列を使う
 
-```typescript
+```ts
 const Foodstuff = [
   'onion',
   'cucumber',
@@ -165,7 +165,7 @@ const food: Foodstuff = 'apple'
 しかし、配列ではキーをつけられないので、`1. enumを使う`と同じ問題が生じる。
 また、変数なので当然、型として使用できない。これを型として使用するに以下のように少し工夫が必要。
 
-```typescript
+```ts
 type Foodstuff = typeof Foodstuff[number]
 // type Foodstuff = "onion" | "cucumber" | "sweetPotato" | "apple"
 ```
@@ -173,7 +173,7 @@ type Foodstuff = typeof Foodstuff[number]
 配列のインデックスとしてnumber型を与えることで、各要素のユニオン型として型を宣言できる。
 識別するキーがないので定数として使うにはビミョーだが、下記のように定数ごとに処理を変えてループを回す、といった活用はできるので、使い所はある。
 
-```typescript
+```ts
 Foodstuff.forEach(food => {
   switch (food) {
     case 'apple':
@@ -188,7 +188,7 @@ Foodstuff.forEach(food => {
 
 ## 6. オブジェクトを使う
 
-```typescript
+```ts
 const Foodstuff = {
   Spring: 'onion',
   Summer: 'cucumber',
@@ -206,7 +206,7 @@ const food: Foodstuff = 'apple'
 配列と似たパターン。四季をキーにしてアクセスできるので、値としての使用はオブジェクトの方が適している。
 型として使用する場合は、配列同様に少し工夫が必要。
 
-```typescript
+```ts
 type Foodstuff = typeof Foodstuff[keyof typeof Foodstuff]
 // type Foodstuff = "onion" | "cucumber" | "sweetPotato" | "apple"
 ```

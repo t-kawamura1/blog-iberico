@@ -16,3 +16,7 @@
 .markdown h3 {
   @apply text-base md:text-lg mt-8 mb-4 md:mb-8 leading-snug;
 }
+
+.markdown code {
+  @apply rounded-md
+}
