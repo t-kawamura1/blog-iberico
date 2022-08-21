@@ -33,7 +33,7 @@ const Layout = ({children}: Props) => {
           <MainMenu></MainMenu>
         </div>
       </div>
-      <div className="min-h-screen">
+      <div className="">
         <main>{children}</main>
       </div>
       <div className="fixed z-20 md:top-1/4 md:right-8">
