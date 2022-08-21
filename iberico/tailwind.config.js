@@ -11,6 +11,7 @@ module.exports = {
           3: "#979997",
           4: "#fcfffc",
         },
+        strongMono: '#d8d8d8',
         accent: {
           green: {
             // https://www.colordic.org/colorsample/7acc7a

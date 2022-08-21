@@ -17,6 +17,10 @@
   @apply text-base md:text-lg mt-8 mb-4 md:mb-8 leading-snug;
 }
 
-.markdown code {
+.markdown pre > code {
   @apply rounded-md
+}
+
+.markdown p >  code {
+  @apply bg-accent-green-2 p-1
 }
