@@ -9,6 +9,10 @@
   @apply my-6;
 }
 
+.markdown p {
+  @apply md:mb-9
+}
+
 .markdown h2 {
   @apply text-lg  md:text-xl mt-12 md:mt-20 mb-4 md:mb-8 leading-snug font-bold;
 }
@@ -19,6 +23,18 @@
 
 .markdown pre > code {
   @apply rounded-md
+}
+
+.markdown h2 >  code {
+  @apply bg-accent-green-2 p-1
+}
+
+.markdown h3 >  code {
+  @apply bg-accent-green-2 p-1
+}
+
+.markdown li >  code {
+  @apply bg-accent-green-2 p-1
 }
 
 .markdown p >  code {

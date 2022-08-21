@@ -36,7 +36,7 @@ const Layout = ({children}: Props) => {
       <div className="min-h-screen">
         <main>{children}</main>
       </div>
-      <div className="fixed z-20 md:top-1/4 md:right-3">
+      <div className="fixed z-20 md:top-1/4 md:right-8">
         <MyContentsMenu />
       </div>
       <Footer />

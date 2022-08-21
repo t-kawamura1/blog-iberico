@@ -41,7 +41,7 @@ const Post = ({post, morePosts}: Props) => {
         ) : (
           <>
             <article className='pt-4'>
-              <div className="mb-24 md:mb-4 mx-2 md:mx-12 pt-2 pb-4 px-5 md:pt-8 md:pb-16 md:px-48 bg-white shadow">
+              <div className="mb-24 md:mb-4 mx-2 md:mx-20 pt-2 pb-4 px-5 md:pt-8 md:pb-16 md:px-40 bg-white shadow">
                 <Head>
                   <title>
                     {post.title} | Blog Iberico
