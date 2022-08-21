@@ -24,3 +24,7 @@
 .markdown p >  code {
   @apply bg-accent-green-2 p-1
 }
+
+.markdown a {
+  @apply text-accent-blue-1 font-bold hover:border-b hover:border-accent-blue-1
+}
