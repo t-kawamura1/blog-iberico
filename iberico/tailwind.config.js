@@ -24,6 +24,7 @@ module.exports = {
             1: "#cc7a7a",
           },
           blue: {
+            // https://www.colordic.org/colorscheme/8ca7d1
             1: "#2a6ad1",
           }
         }
