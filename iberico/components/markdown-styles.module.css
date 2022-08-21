@@ -13,6 +13,10 @@
   @apply md:mb-9
 }
 
+.markdown li > p {
+  @apply md:mb-6
+}
+
 .markdown h2 {
   @apply text-lg  md:text-xl mt-12 md:mt-20 mb-4 md:mb-8 leading-snug font-bold;
 }
