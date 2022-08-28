@@ -31,6 +31,9 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/assets/bg-images/hero.jpg')",
+      },
+      boxShadow: {
+        footer: "0 12px  12px 12px rgb(0 0 0 / 0.1)"
       }
     },
   },
